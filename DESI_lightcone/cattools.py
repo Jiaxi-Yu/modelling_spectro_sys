@@ -4,7 +4,9 @@ python functions to do various useful date processing/manipulation
 import numpy as np
 import glob
 import os
-from random import random
+import random
+np.random.seed(20240503)
+from scipy.special import erfinv
 
 import astropy.io.fits as fits
 from astropy.table import Table,join,unique,vstack,setdiff
