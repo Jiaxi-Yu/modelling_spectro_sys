@@ -45,6 +45,7 @@ python setup.py develop --user
 ## Usage
 After the first installation, apply spectroscopic systematics to the lightcone mocks and produce their LSS catalogues:
 ```bash
+source /global/common/software/desi/users/adematti/cosmodesi_environment.sh main
 source activate spec_sys
 export LSSCODE=${HOME}/codes
 source ${LSSCODE}/LSS/scripts/LSS_path.sh ${LSSCODE}
