@@ -16,7 +16,8 @@ For implementing spectroscopic systematics in boxes, a tutorial Jupyter notebook
 # Implement Spectroscopic Systematics in Lightcones
 This section explains how to apply spectroscopic systematics in DESI mocks (which use the same data format as observations) and compute the two-point correlation function and power spectra (2-point statistics). The recommended cluster for this computation is NERSC.
 
-First, create a new environment and load the DESI environment on NERSC:
+1. Installation
+If you use the code for the first time, start by create a new environment and load the DESI environment on NERSC:
 
 ```bash
 source /global/common/software/desi/users/adematti/cosmodesi_environment.sh main
@@ -41,9 +42,10 @@ git checkout catastrophics
 source LSS_path.sh ${LSSCODE}
 python setup.py develop --user
 ```
-
+2. Usage
 After the first installation, apply spectroscopic systematics to the lightcone mocks and produce their LSS catalogues:
 ```bash
+source activate spec_sys
 export LSSCODE=${HOME}/codes
 source ${LSSCODE}/LSS/scripts/LSS_path.sh ${LSSCODE}
 bash ${LSSCODE}/LSS/scripts/spec_sys_make_LSS.sh 
